@@ -1,0 +1,1 @@
+<a href="index.php?route=lk" rel="nofollow" class="animated4 btn btn-common"><i class="material-icons mdi mdi-account"></i> Личный кабинет</a>

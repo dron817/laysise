@@ -1,0 +1,124 @@
+.choose-section label {
+    height: 240px;
+    width: 240px;
+}
+.choose-section label:hover {
+    width: 220px;
+    height: 220px;
+    margin: 10px;
+    cursor: pointer;
+}
+.choose-section input[type=radio], .choose-section input[type=checkbox] {
+    display: none;
+}
+#img_hero_1 {
+    background: url('/img/hero_1.gif'), #388E3C;
+    background-size: cover;
+}
+#img_hero_2 {
+    background: url('/img/hero_2.gif'), #C2185B;
+    background-size: cover;
+}
+#img_hero_3 {
+    background: url('/img/hero_3.gif'), #1976D2;
+    background-size: cover;
+}
+#img_skill_1 {
+    background: url('/img/book.png'), #5D4037;
+    background-size: cover;
+}
+#img_skill_2 {
+    background: url('/img/guitar.png'), #7B1FA2;
+    background-size: cover;
+}
+#img_skill_3 {
+    background: url('/img/food.png'), #1976D2;
+    background-size: cover;
+}
+#img_skill_4 {
+    background: url('/img/fitnes.png'), #FBC02D;
+    background-size: cover;
+}
+.choose-section input[type=radio]:checked + label, .choose-section input[type=checkbox]:checked + label {
+    width: 200px;
+    height: 200px;
+    margin: 15px;
+    border: 2px solid #1A237E;
+}
+.choose-section input[type=radio]:checked + label:after, .choose-section input[type=checkbox]:checked + label:after{
+    content: "✔";
+    font-weight: bold;
+    color: #1A237E;
+    background-color: white;
+    border: 2px solid;
+    height: 25px;
+    width: 25px;
+    display: block;
+    margin: 10px;
+}
+.profile img{
+    width: 100px;
+    height: 100px;
+
+}
+
+.task {
+    margin: 2rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    line-height: 1rem;
+    height: 1rem;
+    background: inherit;
+    cursor: pointer;
+}
+.task span {
+    color: black;
+}
+.task input {
+    background: tra;
+    position: relative;
+    cursor: pointer;
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: .4rem;
+    background: white;
+}
+
+.task input:before {
+    content: "";
+    position: absolute;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: inherit;
+    cursor: pointer;
+}
+
+.task input:after {
+    content: "";
+    transition: .4s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    width: 1rem;
+    height: 1rem;
+    border: .2rem solid #5166d8;
+}
+
+.task input:checked:after {
+    transform: rotate(-45deg);
+    height: .5rem;
+    border-color: #43A047;
+    border-top-color: transparent;
+    border-right-color: transparent;
+}
+.task pre {
+    color: #5166d8;
+    font-weight: bold;
+    position: absolute;
+    display: inline;
+    padding-left: 10px;
+    top: -10px;
+    font-size: 17px;
+    overflow: hidden;
+}

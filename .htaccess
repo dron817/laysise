@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)\$ $1.php [L]
+#теперь при доступе к http://www.site.ru/home
+#будет открываться http://www.site.ru/home.php
+#[L] скрывает реальный адрес от посетителя
+RewriteRule ^catalog/[0-9]{4}/(.*).cgi$ catalog.php?year=$1&title=$2 [L]

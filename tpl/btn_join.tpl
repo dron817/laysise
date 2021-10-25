@@ -1,0 +1,1 @@
+<a href="#reg" rel="nofollow" class="animated4 btn btn-common"><i class="material-icons mdi mdi-account-plus"></i> Присоедениться сейчас</a>
