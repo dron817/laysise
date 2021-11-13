@@ -1,7 +1,7 @@
 <?php
 function __autoload($class_name) {
 	$filename = strtolower($class_name) . '.php';
-	$file = site_path . 'classes' . DIRSEP . $filename;	
+	$file = site_path . 'classes' . DIRSEP . $filename;
 	//print_r(realpath(dirname(__FILE__));
 	//$file = 'http:'. DIRSEP . DIRSEP .'89cargotaxi.mcdir.ru'. DIRSEP .'classes'. DIRSEP .'registry.php';
 	if (file_exists($file) == false) {
@@ -18,7 +18,7 @@ ini_set('display_startup_errors', 1);
 // Константы:
 define ('DIRSEP', DIRECTORY_SEPARATOR);
 // Узнаём путь до файлов сайта
-$site_path = realpath(dirname(__FILE__) . DIRSEP . '..' . DIRSEP) . DIRSEP . 'httpdocs' . DIRSEP; //TODO при переезде возможны ошибки с 'www'
+$site_path = realpath(dirname(__FILE__) . DIRSEP . '..' . DIRSEP) . DIRSEP . 'laysise' . DIRSEP; //TODO при переезде возможны ошибки с 'www'
 //print_r($site_path);
 define ('site_path', $site_path);
 # Создаём регистратуру
