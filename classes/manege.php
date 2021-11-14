@@ -121,6 +121,16 @@ class Manege
 
         return $this->returnPageMessege("SUCCRESS_EDIT_USER", $this->registry['adress'].$this->registry['lk_link']);
 	}
+    public function addTask()
+    {
+        $user = $this->registry['users']->getUserOnLogin($_SESSION["nick"]);
+        $task["user_id"]=$user["id"];
+        $task["title"]=$this->data["newTask"];
+        $task["exp_cost"]="0";
+        $this->registry["tasks"]->addTask($task);
+
+        return $this->returnPageMessege("SUCCRESS_EDIT_USER", $this->registry['adress'].$this->registry['lk_link']);
+    }
 
     private function bookToUser($user)
     {

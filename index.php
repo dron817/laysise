@@ -57,6 +57,11 @@ elseif (isset($_POST["saveTasks"])){
 	$r = $manage->saveTasks();
 	$manage->redirect($r);
 }
+elseif (isset($_POST["addTask"])){
+	$manage = new Manege ($registry);
+	$r = $manage->addTask();
+	$manage->redirect($r);
+}
 elseif (isset($_POST["editUser"])){
 	$manage = new Manege ($registry);
 	$r = $manage->editUser();

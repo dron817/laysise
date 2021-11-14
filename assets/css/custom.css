@@ -1,6 +1,7 @@
 .choose-section label {
     height: 240px;
     width: 240px;
+    transition: all .2s;
 }
 .choose-section label:hover {
     width: 220px;
