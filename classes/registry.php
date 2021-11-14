@@ -4,13 +4,13 @@ Class Registry Implements ArrayAccess {
     private $vars = array();
 	
 	public function __construct() {
-		$this->vars['db_host'] = "a237567.mysql.mchost.ru";
-		$this->vars['db_username'] = "a237567_ls";
-		$this->vars['db_pswd'] = "f4ed43a3";
+		$this->vars['db_host'] = "localhost";
+		$this->vars['db_username'] = "root";
+		$this->vars['db_pswd'] = "12341234";
 		$this->vars['db_name'] = "a237567_laysise";
 		$this->vars['pswd_secret'] = "_lse";
 		$this->vars['table_secret'] = "lse_";
-		$this->vars['adress'] = "/";
+		$this->vars['adress'] = "/laysise/";
 		$this->vars['logout_link'] = "index.php?logout=1";
 		$this->vars['reg_link'] = "index.php?route=reg";
 		$this->vars['msg_link'] = "index.php?route=msg";
