@@ -18,7 +18,12 @@ ini_set('display_startup_errors', 1);
 // Константы:
 define ('DIRSEP', DIRECTORY_SEPARATOR);
 // Узнаём путь до файлов сайта
+
+//for local
 $site_path = realpath(dirname(__FILE__) . DIRSEP . '..' . DIRSEP) . DIRSEP . 'laysise' . DIRSEP; //TODO при переезде возможны ошибки с 'www'
+//for serv
+$site_path = realpath(dirname(__FILE__) . DIRSEP . '..' . DIRSEP) . DIRSEP . 'httpdocs' . DIRSEP; //TODO при переезде возможны ошибки с 'www'
+
 //print_r($site_path);
 define ('site_path', $site_path);
 # Создаём регистратуру
@@ -33,6 +38,9 @@ $registry->set ('users', $users);
 # Загружаем контроллер таблицы заданий
 $tasks = new tasks($registry);
 $registry->set ('tasks', $tasks);
+# Загружаем контроллер NY
+$newyear = new newyear($registry);
+$registry->set ('newyear', $newyear);
 # Создаём объект шаблонов
 $template = new Template($registry);
 $registry->set ('template', $template);
@@ -60,6 +68,11 @@ elseif (isset($_POST["saveTasks"])){
 elseif (isset($_POST["addTask"])){
 	$manage = new Manege ($registry);
 	$r = $manage->addTask();
+	$manage->redirect($r);
+}
+elseif (isset($_POST["newyear"])){
+	$manage = new Manege ($registry);
+	$r = $manage->newyear();
 	$manage->redirect($r);
 }
 elseif (isset($_POST["editUser"])){

@@ -8,6 +8,9 @@
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
             <mapping local="" />
           </mappings>
+          <excludedPaths>
+            <excludedPath path="/classes/registry.php" />
+          </excludedPaths>
         </serverdata>
       </paths>
     </serverData>

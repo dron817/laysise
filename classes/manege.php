@@ -132,6 +132,20 @@ class Manege
         return $this->returnPageMessege("SUCCRESS_EDIT_USER", $this->registry['adress'].$this->registry['lk_link']);
     }
 
+    public function newyear(){
+        $newyear["fio"] = $this->data["fio"];
+        $newyear["please"] = $this->data["please"];
+        $this->registry["newyear"]->addNY($newyear);
+
+        $id = $this->registry["newyear"]->getLastID();
+        $id--;
+        $NY = $this->registry["newyear"]->getNYOnId($id);
+        $_SESSION["newyear"]="1";
+        $_SESSION["fio"]=$NY["fio"];
+        $_SESSION["please"]=$NY["please"];
+        return $this->registry['adress'] . "index.php?route=newyear";
+
+    }
     private function bookToUser($user)
     {
         $task["user_id"]=$user["id"];
